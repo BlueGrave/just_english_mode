@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-latest # 指定使用 Windows 云服务器编译
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Set up Rust
       uses: dtolnay/rust-toolchain@stable
@@ -19,7 +19,7 @@ jobs:
       run: cargo build --release # 编译 Release 版本，体积更小，运行更快
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: JustEnglishMode-App
         path: target/release/*.exe # 自动将编译好的 exe 文件打包供你下载
