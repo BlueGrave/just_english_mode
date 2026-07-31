@@ -19,7 +19,7 @@ jobs:
       run: cargo build --release # 编译 Release 版本，体积更小，运行更快
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v5
+      uses: actions/upload-artifact@v6
       with:
-        name: JustEnglishMode-App
+        name: JustEnglishMode
         path: target/release/*.exe # 自动将编译好的 exe 文件打包供你下载
